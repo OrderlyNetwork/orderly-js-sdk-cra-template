@@ -1,4 +1,4 @@
-import  { useCallback } from "react";
+import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import { API } from "@orderly.network/types";
 import { Box } from "@orderly.network/ui";
@@ -11,11 +11,14 @@ export default function PositionsPage() {
   const local = useTradingLocalStorage();
   const navigate = useNavigate();
 
-  const onSymbolChange = useCallback((data: API.Symbol) => {
-    const symbol = data.symbol;
-    updateSymbol(symbol);
-    navigate(`/perp/${symbol}`);
-  }, []);
+  const onSymbolChange = useCallback(
+    (data: API.Symbol) => {
+      const symbol = data.symbol;
+      updateSymbol(symbol);
+      navigate(`/perp/${symbol}`);
+    },
+    [navigate]
+  );
 
   return (
     <Box
