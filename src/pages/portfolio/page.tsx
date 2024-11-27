@@ -1,10 +1,5 @@
-import { generatePageTitle } from "../../utils";
-import PortfolioView from "./view";
-
-// export const metadata: Metadata = {
-//   title: generatePageTitle("Portfolio"),
-// };
+import { OverviewModule } from "@orderly.network/portfolio";
 
 export default function PortfolioPage() {
-  return <PortfolioView />;
+  return <OverviewModule.OverviewPage />;
 }
