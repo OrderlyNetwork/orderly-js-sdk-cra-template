@@ -21,6 +21,18 @@ npm install
 npm start
 ```
 
+4. Build
+
+```
+npm run build
+```
+
+5. Create docker image
+
+```
+docker build -t orderly-js-sdk-cra-template .
+```
+
 ## Docs
 
 For more information, please visit the following link:
