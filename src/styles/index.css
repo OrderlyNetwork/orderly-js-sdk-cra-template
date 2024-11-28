@@ -1,4 +1,6 @@
 @import "@orderly.network/ui/dist/styles.css";
+@import "./theme.css";
+@import "./fonts.css";
 
 body {
   margin: 0;
