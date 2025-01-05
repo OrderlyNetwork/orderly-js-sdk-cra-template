@@ -27,7 +27,9 @@ export default function PortfolioLayout() {
       }}
       routerAdapter={{
         onRouteChange,
-        currentPath,
+      }}
+      leftSideProps={{
+        current: currentPath,
       }}
     >
       <Outlet />
