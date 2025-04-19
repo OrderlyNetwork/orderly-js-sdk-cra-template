@@ -6,6 +6,7 @@ import { PositionsModule } from "@orderly.network/portfolio";
 import config from "../../../config";
 import { useTradingLocalStorage } from "@orderly.network/trading";
 import { updateSymbol } from "../../../storage";
+import { PathEnum } from "../../../constant";
 
 export default function PositionsPage() {
   const local = useTradingLocalStorage();
@@ -15,7 +16,7 @@ export default function PositionsPage() {
     (data: API.Symbol) => {
       const symbol = data.symbol;
       updateSymbol(symbol);
-      navigate(`/perp/${symbol}`);
+      navigate(`${PathEnum.Perp}/${symbol}`);
     },
     [navigate]
   );

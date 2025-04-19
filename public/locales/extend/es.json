@@ -1,0 +1,15 @@
+{
+  "extend.products.swap": "Intercambiar",
+  "extend.products.trade": "Comerciar",
+  "extend.tradingRewards.description": "Comercia con Orderly para ganar ORDER",
+  "extend.affiliate.tag": "60% de reembolso",
+  "extend.affiliate.description": "Gana más como afiliado de Orderly",
+  "extend.staking": "Staking",
+  "extend.stake": "Stake",
+  "extend.staking.description": "Stakea ORDER/esORDER para adquirir VALOR",
+  "extend.feeTier.stakingLevel": "nivel de staking",
+  "extend.feeTier.level": "nivel",
+  "extend.feeTier.or": "o",
+  "extend.feeTier.above": "por encima de",
+  "extend.footer.productFeedback": "Comentarios del producto"
+}

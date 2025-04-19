@@ -2,6 +2,9 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import { RouteOption } from "@orderly.network/ui-scaffold";
 import { getSymbol } from "../storage";
+import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
+import { PathEnum } from "../constant";
+import { i18n } from "@orderly.network/i18n";
 
 export function useNav() {
   const navigate = useNavigate();
@@ -15,22 +18,19 @@ export function useNav() {
 
       if (option.href === "/") {
         const symbol = getSymbol();
-        navigate(`/perp/${symbol}`);
+        navigate(`/${i18n.language}${PathEnum.Perp}/${symbol}`);
         return;
       }
 
+      // if href not equal to the route path, we need to convert it to the route path
       const routeMap = {
-        //   "/portfolio": "/portfolio",
-        "/portfolio/feeTier": "/portfolio/fee",
-        "/portfolio/apiKey": "/portfolio/api-key",
-        //   "/portfolio/positions": "/portfolio/positions",
-        //   "/portfolio/orders": "/portfolio/orders",
-        //   "/portfolio/setting": "/portfolio/setting",
+        [PortfolioLeftSidebarPath.FeeTier]: PathEnum.FeeTier,
+        [PortfolioLeftSidebarPath.ApiKey]: PathEnum.ApiKey,
       } as Record<string, string>;
 
       const path = routeMap[option.href] || option.href;
 
-      navigate(path);
+      navigate(`/${i18n.language}${path}`);
     },
     [navigate]
   );
