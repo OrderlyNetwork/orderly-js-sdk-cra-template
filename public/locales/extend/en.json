@@ -1,15 +1,7 @@
 {
-  "extend.products.swap": "Swap",
-  "extend.products.trade": "Trade",
   "extend.tradingRewards.description": "Trade with Orderly to earn ORDER",
-  "extend.affiliate.tag": "60% Rebate",
+  "extend.affiliate.tag": "40% Rebate",
   "extend.affiliate.description": "Earn more as a Orderly affiliate",
   "extend.staking": "Staking",
-  "extend.stake": "Stake",
-  "extend.staking.description": "Stake ORDER/esORDER to acquire VALOR",
-  "extend.feeTier.stakingLevel": "staking level",
-  "extend.feeTier.level": "level",
-  "extend.feeTier.or": "or",
-  "extend.feeTier.above": "Above",
-  "extend.footer.productFeedback": "Product feedback"
+  "extend.staking.description": "Stake ORDER/esORDER to acquire VALOR"
 }

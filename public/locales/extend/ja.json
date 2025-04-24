@@ -1,15 +1,7 @@
 {
-  "extend.products.swap": "スワップ",
-  "extend.products.trade": "取引",
   "extend.tradingRewards.description": "Orderlyで取引してORDERを獲得",
-  "extend.affiliate.tag": "60%リベート",
-  "extend.affiliate.description": "Orderlyアフィリエイトとしてもっと稼ぐ",
+  "extend.affiliate.tag": "40%リベート",
+  "extend.affiliate.description": "Orderlyアフィリエイトでより多くを獲得",
   "extend.staking": "ステーキング",
-  "extend.stake": "ステーク",
-  "extend.staking.description": "ORDER/esORDERをステーキングしてVALORを獲得",
-  "extend.feeTier.stakingLevel": "ステーキングレベル",
-  "extend.feeTier.level": "レベル",
-  "extend.feeTier.or": "または",
-  "extend.feeTier.above": "以上",
-  "extend.footer.productFeedback": "製品フィードバック"
+  "extend.staking.description": "ORDER/esORDERをステーキングしてVALORを獲得"
 }

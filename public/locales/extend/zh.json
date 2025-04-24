@@ -1,15 +1,7 @@
 {
-  "extend.products.swap": "兑换",
-  "extend.products.trade": "交易",
   "extend.tradingRewards.description": "在 Orderly 交易即可赚取 ORDER",
-  "extend.affiliate.tag": "60% 返佣",
+  "extend.affiliate.tag": "40% 返佣",
   "extend.affiliate.description": "成为 Orderly 合作伙伴，赚取更多收益",
   "extend.staking": "质押",
-  "extend.stake": "质押",
-  "extend.staking.description": "质押 ORDER/esORDER 以获取 VALOR",
-  "extend.feeTier.stakingLevel": "质押等级",
-  "extend.feeTier.level": "等级",
-  "extend.feeTier.or": "或者",
-  "extend.feeTier.above": "高于",
-  "extend.footer.productFeedback": "产品反馈"
+  "extend.staking.description": "质押 ORDER/esORDER 以获取 VALOR"
 }
