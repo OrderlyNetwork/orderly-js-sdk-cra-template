@@ -31,10 +31,8 @@ const AppRoute = () => {
   const pathname = window.location.pathname;
   let localePath = getLocalePathFromPathname(pathname);
 
-  // console.log("currentLocale", currentLocale);
-  // console.log("localePath", localePath);
-
   if (!localePath) {
+    // redirect to the current locale path  /perp/PERP_ETH_USDC => /en/perp/PERP_ETH_USDC
     window.history.replaceState({}, "", `/${currentLocale}${pathname}`);
     return;
   }

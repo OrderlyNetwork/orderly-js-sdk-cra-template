@@ -7,8 +7,8 @@ import { PathEnum } from "../../constant";
 export type BaseLayoutProps = {
   children: React.ReactNode;
   initialMenu?: string;
-} & Pick<ScaffoldProps, "classNames">;
-
+  classNames?: ScaffoldProps["classNames"];
+};
 export const BaseLayout: FC<BaseLayoutProps> = (props) => {
   const config = useOrderlyConfig();
 

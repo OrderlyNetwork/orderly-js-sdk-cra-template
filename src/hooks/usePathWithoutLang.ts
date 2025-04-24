@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router";
+import { removeLangPrefix } from "@orderly.network/i18n";
 
 /**
  * Get the pathname without the language prefix
@@ -8,8 +9,7 @@ import { useLocation } from "react-router";
  */
 export function usePathWithoutLang() {
   const location = useLocation();
+  const pathname = location.pathname;
 
-  return useMemo(() => {
-    return location.pathname.replace(/^\/[^/]+/, "");
-  }, [location.pathname]);
+  return useMemo(() => removeLangPrefix(pathname), [pathname]);
 }
