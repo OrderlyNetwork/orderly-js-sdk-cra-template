@@ -33,9 +33,10 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "npm run copyLocales && craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "copyLocales": "node scripts/copyLocales.js"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0"
+    "@craco/craco": "^7.1.0",
+    "fs-extra": "^11.3.0"
   }
 }
