@@ -1,11 +1,20 @@
-import { FC, ReactNode } from "react";
 import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
-import { LocaleCode, LocaleEnum, LocaleProvider, removeLangPrefix } from "@orderly.network/i18n";
+import {
+  LocaleCode,
+  LocaleEnum,
+  LocaleProvider,
+  removeLangPrefix,
+} from "@orderly.network/i18n";
 import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
+import { useNav } from "../../hooks/useNav";
+import { Outlet } from "react-router";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
-const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
+export const OrderlyProvider = () => {
   const config = useOrderlyConfig();
+  const { onRouteChange } = useNav();
+  usePageTitle();
 
   const onLanguageChanged = async (lang: LocaleCode) => {
     const path = removeLangPrefix(window.location.pathname);
@@ -31,12 +40,11 @@ const OrderlyProvider: FC<{ children: ReactNode }> = (props) => {
           brokerName="Orderly"
           networkId="testnet"
           appIcons={config.orderlyAppProvider.appIcons}
+          onRouteChange={onRouteChange}
         >
-          {props.children}
+          <Outlet />
         </OrderlyAppProvider>
       </WalletConnectorProvider>
     </LocaleProvider>
   );
 };
-
-export default OrderlyProvider;

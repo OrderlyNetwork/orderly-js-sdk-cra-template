@@ -5,7 +5,6 @@ import {
   RouteObject,
 } from "react-router";
 import { getSymbol } from "./storage";
-import PageTitle from "./components/pageTitle";
 import PerpPage from "./pages/perp/page";
 import { PortfolioLayout, TradingRewardsLayout } from "./components/layout";
 import PortfolioPage from "./pages/portfolio/page";
@@ -23,6 +22,7 @@ import {
   i18n,
   parseI18nLang,
 } from "@orderly.network/i18n";
+import { OrderlyProvider } from "./components/orderlyProvider";
 
 const AppRoute = () => {
   // console.log("browser language", i18n?.language);
@@ -115,7 +115,7 @@ const AppRoute = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <PageTitle />,
+      element: <OrderlyProvider />,
       children: [
         {
           index: true,

@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { formatSymbol, generatePageTitle } from "../../utils";
 import { useParams } from "react-router";
-import { PageTitleMap, PathEnum } from "../../constant";
-import { usePathWithoutLang } from "../../hooks/usePathWithoutLang";
+import { usePathWithoutLang } from "./usePathWithoutLang";
+import { PageTitleMap, PathEnum } from "../constant";
+import { formatSymbol, generatePageTitle } from "../utils";
 
-export function PageTitle() {
+/** update the page title when the path changes */
+export function usePageTitle() {
   const params = useParams();
 
   const path = usePathWithoutLang();
@@ -19,6 +20,4 @@ export function PageTitle() {
 
     document.title = generatePageTitle(title);
   }, [params, path]);
-
-  return null;
 }
