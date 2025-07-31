@@ -24,6 +24,7 @@ import {
 } from "@orderly.network/i18n";
 import { OrderlyProvider } from "./components/orderlyProvider";
 import AssetsPage from "./pages/portfolio/assets/page";
+import { PathEnum } from "./constant";
 
 const AppRoute = () => {
   // console.log("browser language", i18n?.language);
@@ -32,9 +33,12 @@ const AppRoute = () => {
   const pathname = window.location.pathname;
   let localePath = getLocalePathFromPathname(pathname);
 
-  if (!localePath) {
-    // redirect to the current locale path  /perp/PERP_ETH_USDC => /en/perp/PERP_ETH_USDC
-    window.history.replaceState({}, "", `/${currentLocale}${pathname}`);
+  // TODO: use react router navigate instead of window.history.replaceState
+  if (!localePath && pathname !== PathEnum.Root) {
+    // redirect to the current locale path
+    // /perp/PERP_ETH_USDC => /en/perp/PERP_ETH_USDC
+    const redirectPath = `/${currentLocale}${pathname}`;
+    window.history.replaceState({}, "", redirectPath);
     return;
   }
 
@@ -124,7 +128,9 @@ const AppRoute = () => {
       children: [
         {
           index: true,
-          element: <Navigate to={currentLocale} />,
+          element: (
+            <Navigate to={`${currentLocale}${PathEnum.Perp}/${getSymbol()}`} />
+          ),
         },
         {
           path: ":lang",
