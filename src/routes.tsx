@@ -23,6 +23,7 @@ import {
   parseI18nLang,
 } from "@orderly.network/i18n";
 import { OrderlyProvider } from "./components/orderlyProvider";
+import AssetsPage from "./pages/portfolio/assets/page";
 
 const AppRoute = () => {
   // console.log("browser language", i18n?.language);
@@ -73,6 +74,10 @@ const AppRoute = () => {
         {
           path: "orders",
           element: <OrdersPage />,
+        },
+        {
+          path: "assets",
+          element: <AssetsPage />,
         },
         {
           path: "fee",
