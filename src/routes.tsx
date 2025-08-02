@@ -25,6 +25,7 @@ import {
 import { OrderlyProvider } from "./components/orderlyProvider";
 import AssetsPage from "./pages/portfolio/assets/page";
 import { PathEnum } from "./constant";
+import HistoryPage from "./pages/portfolio/history/page";
 
 const AppRoute = () => {
   // console.log("browser language", i18n?.language);
@@ -94,6 +95,10 @@ const AppRoute = () => {
         {
           path: "setting",
           element: <SettingsPage />,
+        },
+        {
+          path: "history",
+          element: <HistoryPage />,
         },
       ],
     },
