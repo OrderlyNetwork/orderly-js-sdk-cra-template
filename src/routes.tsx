@@ -134,7 +134,12 @@ const AppRoute = () => {
         {
           index: true,
           element: (
-            <Navigate to={`${currentLocale}${PathEnum.Perp}/${getSymbol()}`} />
+            <Navigate
+              // preserve the search parameters to ensure link device via url params works
+              to={`/${currentLocale}${PathEnum.Perp}/${getSymbol()}${
+                window.location.search
+              }`}
+            />
           ),
         },
         {
