@@ -32,7 +32,7 @@ function getCampaigns() {
         title: "RISE ABOVE. OUTTRADE THE REST",
         description:
           "A new era of traders is rising. Are you the one leading the charge? Compete for your share of $10K by climbing the ranks. Only the bold will make it to the top.",
-        image: "/leaderboard/campaign.jpg",
+        image: "/images/leaderboard/campaign.jpg",
         href: "https://orderly.network/",
         ...date,
       } as Campaign)
