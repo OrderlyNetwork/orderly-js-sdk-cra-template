@@ -1,4 +1,4 @@
-FROM node:latest AS base
+FROM node:20-slim AS base
 
 FROM base AS deps
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm run build
 FROM nginx:alpine AS runtime
 WORKDIR /app
 
-COPY --from=builder /app/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /app/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/build /usr/share/nginx/html
 
 EXPOSE 80
