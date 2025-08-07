@@ -3,15 +3,16 @@ import { useNavigate } from "react-router";
 import { API } from "@orderly.network/types";
 import { Box } from "@orderly.network/ui";
 import { PositionsModule } from "@orderly.network/portfolio";
-import config from "../../../config";
 import { useTradingLocalStorage } from "@orderly.network/trading";
 import { updateSymbol } from "../../../storage";
 import { PathEnum } from "../../../constant";
 import { generateLocalePath } from "../../../utils";
+import { useOrderlyConfig } from "../../../hooks/useOrderlyConfig";
 
 export default function PositionsPage() {
-  const local = useTradingLocalStorage();
   const navigate = useNavigate();
+  const local = useTradingLocalStorage();
+  const config = useOrderlyConfig();
 
   const onSymbolChange = useCallback(
     (data: API.Symbol) => {
