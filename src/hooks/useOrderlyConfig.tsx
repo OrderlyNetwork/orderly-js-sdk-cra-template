@@ -76,7 +76,11 @@ export const useOrderlyConfig = () => {
         appIcons: {
           main: {
             component: (
-              <img src="/images/orderly-logo.svg" style={{ height: 40 }} />
+              <img
+                alt="Orderly logo"
+                src="/images/orderly-logo.svg"
+                style={{ width: 100, height: 40 }}
+              />
             ),
           },
           secondary: {
