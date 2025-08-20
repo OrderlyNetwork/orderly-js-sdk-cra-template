@@ -1,8 +1,8 @@
 import { Outlet } from "react-router";
 import { TradingRewardsLayoutWidget } from "@orderly.network/trading-rewards";
-import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
-import { useNav } from "../../hooks/useNav";
 import { PathEnum } from "../../constant";
+import { useNav } from "../../hooks/useNav";
+import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
 import { usePathWithoutLang } from "../../hooks/usePathWithoutLang";
 
 export const TradingRewardsLayout = () => {

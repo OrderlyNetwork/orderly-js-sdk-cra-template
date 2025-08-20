@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { API } from "@orderly.network/types";
 import { TradingPage, TradingPageProps } from "@orderly.network/trading";
-import { updateSymbol } from "../../storage";
+import { API } from "@orderly.network/types";
 import { BaseLayout } from "../../components/layout";
 import { PathEnum } from "../../constant";
-import { generateLocalePath } from "../../utils";
 import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
+import { updateSymbol } from "../../storage";
+import { generateLocalePath } from "../../utils";
 
 export type PerpViewProps = Pick<TradingPageProps, "symbol">;
 
@@ -26,7 +26,7 @@ export default function PerpPage() {
       setSymbol(symbol);
       navigate(generateLocalePath(`${PathEnum.Perp}/${symbol}`));
     },
-    [navigate]
+    [navigate],
   );
 
   return (

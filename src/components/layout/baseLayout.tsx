@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Scaffold, ScaffoldProps } from "@orderly.network/ui-scaffold";
+import { PathEnum } from "../../constant";
 import { useNav } from "../../hooks/useNav";
 import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
-import { PathEnum } from "../../constant";
 
 export type BaseLayoutProps = {
   children: React.ReactNode;

@@ -1,10 +1,10 @@
 import { useMemo } from "react";
+import { type RestrictedInfoOptions } from "@orderly.network/hooks";
+import { useTranslation } from "@orderly.network/i18n";
+import { AppLogos } from "@orderly.network/react-app";
 import { TradingPageProps } from "@orderly.network/trading";
 import { FooterProps, MainNavWidgetProps } from "@orderly.network/ui-scaffold";
-import { type RestrictedInfoOptions } from "@orderly.network/hooks";
-import { AppLogos } from "@orderly.network/react-app";
 import { OrderlyActiveIcon, OrderlyIcon } from "../components/icons/orderly";
-import { useTranslation } from "@orderly.network/i18n";
 import { PathEnum } from "../constant";
 
 export type OrderlyConfig = {

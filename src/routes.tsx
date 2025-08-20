@@ -4,28 +4,28 @@ import {
   RouterProvider,
   RouteObject,
 } from "react-router";
-import { getSymbol } from "./storage";
-import PerpPage from "./pages/perp/page";
-import { PortfolioLayout, TradingRewardsLayout } from "./components/layout";
-import PortfolioPage from "./pages/portfolio/page";
-import PositionsPage from "./pages/portfolio/positions/page";
-import OrdersPage from "./pages/portfolio/orders/page";
-import FeeTierPage from "./pages/portfolio/fee/page";
-import APIKeyPage from "./pages/portfolio/api-key/page";
-import SettingsPage from "./pages/portfolio/setting/page";
-import MarketsPage from "./pages/markets/page";
-import LeaderboardPage from "./pages/leaderboard/page";
-import TradingRewardsPage from "./pages/rewards/trading/page";
-import AffiliatePage from "./pages/rewards/affiliate/page";
 import {
   getLocalePathFromPathname,
   i18n,
   parseI18nLang,
 } from "@orderly.network/i18n";
+import { PortfolioLayout, TradingRewardsLayout } from "./components/layout";
 import { OrderlyProvider } from "./components/orderlyProvider";
-import AssetsPage from "./pages/portfolio/assets/page";
 import { PathEnum } from "./constant";
+import LeaderboardPage from "./pages/leaderboard/page";
+import MarketsPage from "./pages/markets/page";
+import PerpPage from "./pages/perp/page";
+import APIKeyPage from "./pages/portfolio/api-key/page";
+import AssetsPage from "./pages/portfolio/assets/page";
+import FeeTierPage from "./pages/portfolio/fee/page";
 import HistoryPage from "./pages/portfolio/history/page";
+import OrdersPage from "./pages/portfolio/orders/page";
+import PortfolioPage from "./pages/portfolio/page";
+import PositionsPage from "./pages/portfolio/positions/page";
+import SettingsPage from "./pages/portfolio/setting/page";
+import AffiliatePage from "./pages/rewards/affiliate/page";
+import TradingRewardsPage from "./pages/rewards/trading/page";
+import { getSymbol } from "./storage";
 
 const AppRoute = () => {
   // console.log("browser language", i18n?.language);

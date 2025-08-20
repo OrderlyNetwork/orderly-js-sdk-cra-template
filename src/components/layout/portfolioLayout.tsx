@@ -4,10 +4,10 @@ import {
   PortfolioLayoutWidget,
   PortfolioLeftSidebarPath,
 } from "@orderly.network/portfolio";
-import { useNav } from "../../hooks/useNav";
 import { PathEnum } from "../../constant";
-import { usePathWithoutLang } from "../../hooks/usePathWithoutLang";
+import { useNav } from "../../hooks/useNav";
 import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
+import { usePathWithoutLang } from "../../hooks/usePathWithoutLang";
 
 export const PortfolioLayout = () => {
   const config = useOrderlyConfig();

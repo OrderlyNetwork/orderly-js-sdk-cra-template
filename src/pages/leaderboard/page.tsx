@@ -1,12 +1,12 @@
-import { useScaffoldContext } from "@orderly.network/ui-scaffold";
-import { Box, useScreen } from "@orderly.network/ui";
+import { useMemo } from "react";
 import {
   Campaign,
   LeaderboardWidget,
 } from "@orderly.network/trading-leaderboard";
+import { Box, useScreen } from "@orderly.network/ui";
+import { useScaffoldContext } from "@orderly.network/ui-scaffold";
 import { BaseLayout } from "../../components/layout";
 import { PathEnum } from "../../constant";
-import { useMemo } from "react";
 import { getSymbol } from "../../storage";
 import { generateLocalePath } from "../../utils";
 
@@ -35,7 +35,7 @@ function getCampaigns() {
         image: "/images/leaderboard/campaign.jpg",
         href: "https://orderly.network/",
         ...date,
-      } as Campaign)
+      }) as Campaign,
   );
 }
 

@@ -1,9 +1,9 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
-import { RouteOption } from "@orderly.network/ui-scaffold";
-import { getSymbol } from "../storage";
 import { PortfolioLeftSidebarPath } from "@orderly.network/portfolio";
+import { RouteOption } from "@orderly.network/ui-scaffold";
 import { PathEnum } from "../constant";
+import { getSymbol } from "../storage";
 import { generateLocalePath } from "../utils";
 
 export function useNav() {
@@ -32,7 +32,7 @@ export function useNav() {
 
       navigate(generateLocalePath(path));
     },
-    [navigate]
+    [navigate],
   );
 
   return { onRouteChange };

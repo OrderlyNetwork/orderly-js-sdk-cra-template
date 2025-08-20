@@ -1,14 +1,14 @@
-import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
-import { OrderlyAppProvider } from "@orderly.network/react-app";
+import { Outlet } from "react-router";
 import {
   LocaleCode,
   LocaleEnum,
   LocaleProvider,
   removeLangPrefix,
 } from "@orderly.network/i18n";
-import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
+import { OrderlyAppProvider } from "@orderly.network/react-app";
+import { WalletConnectorProvider } from "@orderly.network/wallet-connector";
 import { useNav } from "../../hooks/useNav";
-import { Outlet } from "react-router";
+import { useOrderlyConfig } from "../../hooks/useOrderlyConfig";
 import { usePageTitle } from "../../hooks/usePageTitle";
 
 export const OrderlyProvider = () => {

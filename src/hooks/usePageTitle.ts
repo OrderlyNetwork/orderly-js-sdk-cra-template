@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { usePathWithoutLang } from "./usePathWithoutLang";
 import { PageTitleMap, PathEnum } from "../constant";
 import { formatSymbol, generatePageTitle } from "../utils";
+import { usePathWithoutLang } from "./usePathWithoutLang";
 
 /** update the page title when the path changes */
 export function usePageTitle() {
