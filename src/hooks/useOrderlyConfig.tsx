@@ -95,9 +95,9 @@ export const useOrderlyConfig = () => {
       },
       tradingPage: {
         tradingViewConfig: {
-          scriptSRC: "/tradingview/charting_library/charting_library.js",
-          library_path: "/tradingview/charting_library/",
-          customCssUrl: "/tradingview/chart.css",
+          // scriptSRC: "/tradingview/charting_library/charting_library.js",
+          // library_path: "/tradingview/charting_library/",
+          // customCssUrl: "/tradingview/chart.css",
         },
         sharePnLConfig: {
           backgroundImages: [
